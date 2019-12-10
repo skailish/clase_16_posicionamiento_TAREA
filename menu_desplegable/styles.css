@@ -4,80 +4,88 @@ body {
     background-color: #ccc;
     margin: 0;
     padding: 0;
+    text-align: center;
+}
+
+nav {
+    height: 50px;
+    width: 100%;
+    background-color: #6585ab;
+    box-shadow: 1px 1px 5px rgb(0,0,0,0.4);
+    display: flex;
+    align-items: center;
 }
 
 ul {
     padding: 0;
+    margin: 0;
     list-style: none;
+    display: flex;
 }
 
 li {
-    margin: 0 10px;
-    text-align: center;
-    line-height: 30px;
-    padding: 0 10px;
-    border-radius: 2px;
+    padding: 5px 10px;
+    width: 120px;
     cursor: pointer;
 }
 
 .main-menu {
     display: flex;
+    align-content: center;
+    justify-items: center;
     font-size: x-large;
+    height: 50px;
 }
 
 .main-menu-item {
-    background-color: #6585ab;
-    width: 90px;
-    height: 30px;
-    box-shadow: 1px 1px 5px rgb(0,0,0,0.4);
     color: white;
     text-transform: uppercase;
+    vertical-align: middle;
     position: relative;
+    bordeR-top: 5px solid #6585ab;
 }
 
 .main-menu-item:hover {
     background-color: #406694;
+    color: rgb(6, 38, 80);
+    bordeR-top: 5px solid black;
 }
 .sub-menu {
+    position: absolute;
+    left: 0px;
+    top: 45px;
     font-size: large;
     text-transform: none;
     color: #111;
     display: none;
 }
 
-.sub-sub-menu {
-    font-size: small;
-    display: none;
-}
-
-.sub-menu-item, .sub-sub-menu-item {
+.sub-menu-item {
     background-color: #6585ab;
-    width: 90px;
-    height: 30px;
-    margin: 0;
-    border-radius: 0;
+    border-bottom: 2px solid #6585ab;
     position: relative;
-}
-
-.sub-menu {
-    position: absolute;
-    left: 0px;
-    top: 30px;
 }
 
 .sub-menu-item:hover {
     background-color: indianred;
+    color: white;
+    border-bottom: 2px solid rgb(218, 68, 68);
 }
 
 .sub-sub-menu {
     position: absolute;
-    left: 110px;
+    left: 140px;
     top: 0px;
-    background-color: lightblue;
+    font-size: small;
+    display: none;
+}
+
+.sub-sub-menu-item {
+    background-color: rgb(221, 129, 129);
 }
 
 .sub-sub-menu-item:hover {
-    background-color:#406694;
+    background-color: rgb(204, 114, 114);
 }
 
 .main-menu-item:hover .sub-menu, .sub-menu-item:hover .sub-sub-menu {
