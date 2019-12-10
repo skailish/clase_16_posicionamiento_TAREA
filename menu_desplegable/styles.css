@@ -1,0 +1,85 @@
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #ccc;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    margin: 0 10px;
+    text-align: center;
+    line-height: 30px;
+    padding: 0 10px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.main-menu {
+    display: flex;
+    font-size: x-large;
+}
+
+.main-menu-item {
+    background-color: #6585ab;
+    width: 90px;
+    height: 30px;
+    box-shadow: 1px 1px 5px rgb(0,0,0,0.4);
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.main-menu-item:hover {
+    background-color: #406694;
+}
+.sub-menu {
+    font-size: large;
+    text-transform: none;
+    color: #111;
+    display: none;
+}
+
+.sub-sub-menu {
+    font-size: small;
+    display: none;
+}
+
+.sub-menu-item, .sub-sub-menu-item {
+    background-color: #6585ab;
+    width: 90px;
+    height: 30px;
+    margin: 0;
+    border-radius: 0;
+    position: relative;
+}
+
+.sub-menu {
+    position: absolute;
+    left: 0px;
+    top: 30px;
+}
+
+.sub-menu-item:hover {
+    background-color: indianred;
+}
+
+.sub-sub-menu {
+    position: absolute;
+    left: 110px;
+    top: 0px;
+    background-color: lightblue;
+}
+
+.sub-sub-menu-item:hover {
+    background-color:#406694;
+}
+
+.main-menu-item:hover .sub-menu, .sub-menu-item:hover .sub-sub-menu {
+    display: inline-block; /* Por qué INLINE-BLOCK y no block? */
+}
